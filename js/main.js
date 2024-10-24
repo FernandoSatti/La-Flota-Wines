@@ -33,3 +33,13 @@ window.onload = function() {
 }
 /* Petición de edad */
 
+/*desplazamiendo del header*/
+// Parallax effect for hero section
+window.addEventListener('scroll', function() {
+    const heroSection = document.querySelector('.hero');
+    const scrollPosition = window.pageYOffset;
+    heroSection.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+});
+
+/*desplazamiendo del header*/
+
