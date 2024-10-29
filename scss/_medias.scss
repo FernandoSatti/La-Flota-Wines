@@ -75,6 +75,10 @@
 }
 
 @media screen and (max-width: 576px){
+
+    .iconowines{
+        width: 150px;
+    }
     .info-container{
         flex-direction: column;
         .info-container-text {

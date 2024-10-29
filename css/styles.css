@@ -761,6 +761,9 @@ footer .group3-footer ul li a:hover {
   }
 }
 @media screen and (max-width: 576px) {
+  .iconowines {
+    width: 150px;
+  }
   .info-container {
     flex-direction: column;
   }
