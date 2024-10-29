@@ -1,0 +1,86 @@
+/*footer*/
+footer {
+    width: auto;
+    background: var(--bg-gradient); 
+    ul {
+        li {
+            list-style-type: none;
+            display: inline-block;
+            background-color: var(--bg-dark); 
+            padding: 5px 10px; 
+            text-align: center;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    .group1-footer {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+        padding: 45px 10px;     
+        .red-social a {
+            img {
+                stroke: white;
+            }
+            display: inline-block;
+            text-decoration: none;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            margin: 20px 10px;
+            background-color: rgb(187, 186, 186);
+            text-align: center;
+            transition: all 300ms ease; /* $transition300 */
+            &:hover {
+                background-color: var(--color-hover); /* $maincolor */
+            }
+            h2 {
+                font-size: 1.2em; /* $textsm */
+            }
+        }
+        .box {
+            h2 {
+                font-size: 1.2em; /* $textsm */
+            }
+            p {
+                color: #e9f5ec; /* $textcolor */
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .group2-footer {
+        background-color: #0a1a2a; /* $bgblack2 */
+        padding: 15px 10px; /* map-get($padding-map, p15-10) */
+        text-align: center;
+        color: var(--font-light); /* $textcolor */
+        small {
+            font-size: 15px;
+        }
+    }
+    .group3-footer ul {
+        padding: 0;
+        li {
+            &:hover {
+                background-color: var(--color-hover); /* $bordercolor */
+                transition: all 300ms ease; /* $transition300 */
+                ;
+            }
+            a {
+                color: var(--font-light); /* $textcolor */
+                &:hover{
+                    color: var(--font-dark);
+                }
+            }
+        }
+    }
+}
+.svg-link {
+    fill: white;
+}
+
+/*footer*/
+
+/*# sourceMappingURL=styles.css.map */

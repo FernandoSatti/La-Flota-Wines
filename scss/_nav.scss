@@ -1,0 +1,85 @@
+/*nav*/
+.navbar {
+    transition: top 0.3s;
+    position: fixed;
+    /* Mantiene la navbar fija en la parte superior */
+    top: 0;
+    /* Inicialmente en la parte superior */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1000;
+}
+
+.nav-link {
+    font-family: "Merriweather", serif;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-light);
+}
+
+.iconowines {
+    transition: transform 0.2s ease; /* Define la propiedad, duración y función de tiempo */
+}
+
+.iconowines:hover {
+    transform: scale(1.1);
+}
+
+.botonera {
+    background: var(--bg-gradient);
+}
+
+.nav-link {
+    color: var(--font-light);
+}
+
+/*boton hamburgesa de la nav*/
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.nav-link {
+    position: relative;
+    /* Para posicionar el borde correctamente */
+    padding-top: 10px;
+    /* Espacio para el borde */
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    /* Coloca el borde en la parte superior */
+    left: 0;
+    right: 0;
+    height: 3px;
+    /* Grosor del borde */
+    background-color: transparent;
+    /* Color del borde inicial */
+    transition: background-color 0.3s;
+    /* Suaviza la transición del color */
+}
+
+.nav-link:hover::before {
+    background-color: var(--bg-light);
+    /* Cambia a tu color deseado al pasar el mouse */
+}
+
+.nav-link.active {
+    border-top: 0.5px solid var(--color-light);
+    /* Mantener el borde cuando está activo */
+    color: var(--color-light);
+    /* Asegúrate de que también cambie el color si es necesario */
+}
+
+.nav-link:hover {
+    color: var(--color-light);
+}
+
+/*boton hamburgesa de la nav*/
+/*nav*/

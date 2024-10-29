@@ -1,0 +1,83 @@
+:root {
+    //colores
+    --color-light: #ffffff;
+    --color-gray: #f0f0f0;
+    --color-hover: #ebebeb;
+    --color-warning: #e74c3c;
+    //fuentes
+    --font-light: #ffffff;
+    --font-dark: #333333;
+    //effects
+    --transition: all 0.3s ease-in-out;
+    //backgrounds
+    --bg-light: #ffffff;
+    --bg-main: #19233e;
+    --bg-dark: #0a1a2a;
+    --bg-gradient: linear-gradient(90deg, rgba(25, 35, 62, 1) 0%, rgba(25, 35, 62, 1) 32%, rgba(6, 41, 80, 1) 100%);
+  }
+
+  //variables globales
+$maincolor: rgb(1,226,226);
+$textcolor: #e9f5ec;
+$bordercolor: rgb(0,112,112);
+$black: #0a1a2a;
+
+//fonts
+$mainfont: 'Roboto', sans-serif;
+
+//weight
+$textregular:400;
+$textlight: 300;
+$textbold: 600;
+
+//sizes
+$texthsm:0.8em;
+$textsm: 1.2em;
+$textmd: 1.4em;
+$textlg:2.2em;
+$textxl: 3em;
+
+//background
+$bgwhite: white;
+$bgblack1:#0a141d;
+$bgblack2: #0a1a2a;
+$bgblack3: #0d2033;
+
+//filter
+$box-shadow: drop-shadow(0px 0px 5px rgba(1, 226, 226, 0.5));
+
+//transition pack
+$pack1-bgcolor:rgb(2,0,36);
+$pack2-gradient:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,226,226,0.5564600840336135) 93%, rgba(0,212,255,1) 100%);
+$transition300: all 300ms ease;
+$scale:scale(1.1);
+
+//maps
+$padding-map:( 
+    p0-4:   0px 4px,
+    p0-10:  0px 10px,
+    p0-20:  0px 20px,
+    p0-30:  0px 30px,
+    p3-30:  3px 30px,
+    p4-3:   4px 3px,
+    p4-30:  4px 30px,
+    p5:     5px,
+    p5-10:  5px 10px,
+    p15-10: 15px 10px,
+    p20-5:  20px 5px,
+    p20-15: 20px 15px,
+    p20-30: 20px 30px,
+    p20-50: 20px 50px,
+    p45-10: 45px 10px,
+    );
+
+$colors-map:(
+    claro1:  #04fefe,
+    claro2:  #04dede,
+    claro3:  #03bfbf,
+    claro4:  #039f9f,
+    oscruo1: #027f7f,
+    oscuro2: #025f5f,
+    oscuro3: #014040,
+    oscuro4: #012020,
+)

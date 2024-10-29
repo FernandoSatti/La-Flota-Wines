@@ -1,0 +1,123 @@
+/*header nuevo*/
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*header nuevo*/
+
+.grid {
+    max-width: 800px;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.text,
+.image {
+    flex: 1;
+    /* Para que ocupen el mismo espacio */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/*section info botella*/
+.h2-white {
+    color: var(--font-light);
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.info-container {
+    display: flex;
+    /* Usar flexbox */
+    justify-content: center;
+    align-items: center;
+    /* Alinear verticalmente */
+    border: 1px solid black;
+    background: rgb(25, 35, 62);
+    background: -moz-linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
+    background: linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
+    border-radius: 10px;
+    margin: 20px;
+    width: auto;
+}
+
+.info-container-text {
+    width: 50%;
+    /* 50% de ancho */
+    padding: 20px;
+    /* Espaciado interno */
+    color: var(--font-light);
+}
+
+.info-image {
+    width: 100%;
+    /* Ancho completo del contenedor */
+    max-width: 200px;
+    /* Ajusta este valor según lo necesites */
+    height: auto;
+    /* Mantener la proporción de la imagen */
+    object-fit: cover;
+    /* Ajustar la imagen a su contenedor */
+}
+
+.info-image:hover {
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+/*section info botella*/
+/*section gallery*/
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-gradient);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.grid-item img,
+.pack-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.grid-item img:hover,
+.pack-item img:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: var(--font-light);
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+#btn-submit {
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.3px solid var(--font-dark);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  color: var(--font-dark);
+
+  &:hover {
+    background: var(--bg-gradient);
+    color: var(--font-light);
+    transition: 0.5s ease-out;
+    transform: scale(1.1);
+  }
+}
+
+p {
+  color: var(--font-light);
+}
+
+/*personalizacion de botones*/
+.btn {
+  --color: var(--color-light);
+  --color2: var(--color-light);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--bg-light);
+}
+
+.btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+  color: var(--color-gray);
+}
+
+.btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+  color: var(--color-gray);
+}
+
+.btn:hover {
+  color: var(--font-dark);
+}
+
+.btn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
+
+/*personalizacion de botones*/
+/*scrollbar*/
+body::-webkit-scrollbar {
+  width: 13px;
+  background: var(--bg-main);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--bg-light);
+  border-radius: 50px;
+  border: 1px solid #0a141d;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(102, 102, 102);
+}
+
+/*scrollbar*/
