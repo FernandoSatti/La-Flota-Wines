@@ -35,11 +35,18 @@ window.onload = function() {
 
 /*desplazamiendo del header*/
 // Parallax effect for hero section
-window.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.querySelector('.hero');
-    const scrollPosition = window.pageYOffset;
-    heroSection.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+    
+    // Solo añade el evento si heroSection existe
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            heroSection.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+        });
+    }
 });
+
 
 /*desplazamiendo del header*/
 

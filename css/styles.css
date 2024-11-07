@@ -111,6 +111,14 @@
   transition: var(--transition);
 }
 
+.logo-info {
+  position: absolute; /* Para poder posicionarlo en la esquina */
+  bottom: 10px; /* Ajusta según necesites */
+  left: 10px; /* Ajusta según necesites */
+  width: 500px; /* Ajusta el tamaño según necesites */
+  height: auto;
+}
+
 /*section info botella*/
 /*section gallery*/
 .image-grid {
@@ -159,6 +167,7 @@
 
 .iconowines {
   transition: transform 0.2s ease; /* Define la propiedad, duración y función de tiempo */
+  width: 250px;
 }
 
 .iconowines:hover {
@@ -222,20 +231,6 @@
 
 /*boton hamburgesa de la nav*/
 /*nav*/
-.swal2-confirm {
-  background-color: var(--bg-main);
-  /* Cambia el color de fondo */
-  color: white;
-  /* Cambia el color del texto */
-}
-
-.swal2-cancel {
-  background-color: var(--color-warning);
-  /* Cambia el color de fondo */
-  color: white;
-  /* Cambia el color del texto */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -267,7 +262,7 @@ body {
   font-size: 17px;
   font-family: "Roboto", "Segoe UI", sans-serif;
   text-transform: uppercase;
-  color: var(--font-dark);
+  color: var(--font-light);
 }
 #btn-submit:hover {
   background: var(--bg-gradient);
@@ -358,6 +353,247 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /*scrollbar*/
+.swal2-confirm {
+  background-color: var(--bg-main);
+  /* Cambia el color de fondo */
+  color: white;
+  /* Cambia el color del texto */
+}
+
+.swal2-cancel {
+  background-color: var(--color-warning);
+  /* Cambia el color de fondo */
+  color: white;
+  /* Cambia el color del texto */
+}
+
+.h1-about {
+  color: var(--font-light);
+}
+
+.nosotros-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.section-nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--bg-gradient);
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 1s ease;
+}
+.about-image img:hover {
+  transform: scale(1.2);
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--font-light);
+}
+.about-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--font-light);
+}
+.about-content .btn {
+  background: var(--bg-gradient);
+}
+
+#btn-header {
+  background-color: transparent;
+}
+#btn-header #span-header {
+  background-color: var(--bg-main);
+  border-radius: 100%;
+}
+
+.headerr {
+  margin-top: 65px;
+}
+
+.laflota-history {
+  background-color: var(--bg-light);
+  padding: 4rem 0;
+  color: var(--font-dark);
+}
+
+.laflota-history__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.laflota-history__content {
+  width: 50%;
+}
+
+.laflota-history__title {
+  color: var(--bg-main);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.laflota-history__text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--bg-main);
+}
+
+.laflota-history__image {
+  width: 45%;
+}
+
+.laflota-history__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.laflota-process {
+  padding: 4rem 0;
+  background-color: var(--color-gray);
+}
+
+.laflota-process__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.laflota-process__title {
+  text-align: center;
+  color: var(--bg-main);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.laflota-process__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.laflota-process__step {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.laflota-process__step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.laflota-process__image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.laflota-process__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.laflota-process__step:hover .laflota-process__image img {
+  transform: scale(1.1);
+}
+
+.laflota-process__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.laflota-process__icon {
+  font-size: 2rem;
+  color: var(--bg-main);
+  margin-bottom: 1rem;
+}
+
+.laflota-process__content h3 {
+  color: var(--bg-main);
+  margin-bottom: 0.5rem;
+}
+
+.laflota-process__content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--font-dark);
+}
+
+.laflota-origins {
+  padding: 4rem 0;
+  background: var(--bg-main);
+  color: var(--font-light);
+}
+
+.laflota-origins__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.laflota-origins__title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.laflota-origins__text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.laflota-origins__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.laflota-origins__image img {
+  width: 100%;
+  height: auto;
+  transition: var(--transition);
+}
+
+.laflota-origins__image:hover img {
+  transform: scale(1.05);
+}
+
 /*section form*/
 .h1-contact {
   background: var(--bg-gradient);
@@ -432,7 +668,7 @@ textarea:focus {
 }
 
 button {
-  background-color: #007bff;
+  background: var(--bg-gradient);
   color: white;
   padding: 10px 15px;
   border: none;
@@ -442,7 +678,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--bg-main);
 }
 
 .form-info {
@@ -537,6 +773,129 @@ button:hover {
 }
 
 /*button-wp*/
+/*section-distribuidores*/
+.distribution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.distribution-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  max-width: 800px;
+  padding: 10px;
+}
+
+.distribution-text,
+.distribution-image {
+  flex: 1 1 300px;
+}
+
+.distribution-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+  width: 100px;
+  height: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.h2-dark {
+  color: var(--bg-main);
+}
+
+.p-dark {
+  color: var(--bg-main);
+}
+
+/*section-distribuidores*/
+/*section-team*/
+.team {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.team h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--bg-main);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  background-color: var(--color-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 20%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  color: var(--bg-main);
+  margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+  color: var(--bg-main);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-member .bio {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--bg-main);
+}
+
+/*section-team*/
 /*footer*/
 footer {
   width: auto;
@@ -616,25 +975,8 @@ footer .group3-footer ul li a:hover {
 
 /*footer*/
 
-.nosotros {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  background: var(--bg-gradient);
-}
-.nosotros p {
+.h1-about {
   color: var(--font-light);
-  font-size: 18px;
-  margin-bottom: 35px;
-}
-.nosotros h1 {
-  font-size: 50px;
-  color: var(--font-light);
-  margin-bottom: 25px;
-  position: relative;
 }
 
 .nosotros-container {
@@ -648,6 +990,7 @@ footer .group3-footer ul li a:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  background: var(--bg-gradient);
 }
 
 .about-image {
@@ -667,16 +1010,20 @@ footer .group3-footer ul li a:hover {
 
 .about-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .about-content h2 {
-  font-size: 23px;
+  font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--font-light);
 }
 .about-content p {
-  font-size: 18px;
+  font-size: 0.9rem;
   line-height: 1.5;
-  color: #666;
+  color: var(--font-light);
 }
 .about-content .btn {
   background: var(--bg-gradient);
@@ -694,8 +1041,705 @@ footer .group3-footer ul li a:hover {
   margin-top: 65px;
 }
 
+.laflota-history {
+  background-color: var(--bg-light);
+  padding: 4rem 0;
+  color: var(--font-dark);
+}
+
+.laflota-history__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.laflota-history__content {
+  width: 50%;
+}
+
+.laflota-history__title {
+  color: var(--bg-main);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.laflota-history__text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--bg-main);
+}
+
+.laflota-history__image {
+  width: 45%;
+}
+
+.laflota-history__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.laflota-process {
+  padding: 4rem 0;
+  background-color: var(--color-gray);
+}
+
+.laflota-process__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.laflota-process__title {
+  text-align: center;
+  color: var(--bg-main);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.laflota-process__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.laflota-process__step {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.laflota-process__step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.laflota-process__image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.laflota-process__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.laflota-process__step:hover .laflota-process__image img {
+  transform: scale(1.1);
+}
+
+.laflota-process__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.laflota-process__icon {
+  font-size: 2rem;
+  color: var(--bg-main);
+  margin-bottom: 1rem;
+}
+
+.laflota-process__content h3 {
+  color: var(--bg-main);
+  margin-bottom: 0.5rem;
+}
+
+.laflota-process__content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--font-dark);
+}
+
+.laflota-origins {
+  padding: 4rem 0;
+  background: var(--bg-main);
+  color: var(--font-light);
+}
+
+.laflota-origins__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.laflota-origins__title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.laflota-origins__text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.laflota-origins__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.laflota-origins__image img {
+  width: 100%;
+  height: auto;
+  transition: var(--transition);
+}
+
+.laflota-origins__image:hover img {
+  transform: scale(1.05);
+}
+
+/* Showcase Section */
+.wine-showcase {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wine-showcase__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Bottle Styles */
+.wine-bottle {
+  perspective: 1000px;
+}
+
+.wine-bottle__wrapper {
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  animation: floatBottle 6s ease-in-out infinite;
+  margin: 80px;
+}
+
+.wine-bottle__image {
+  max-width: 100%;
+  height: auto;
+  transform: translateZ(50px);
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes floatBottle {
+  0% {
+    transform: translateY(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(5deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0);
+  }
+}
+/* Wine Details */
+.wine-details__title {
+  color: var(--bg-main);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.wine-details__box {
+  background-color: var(--color-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wine-details__subtitle {
+  color: var(--bg-main);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.wine-details__list {
+  list-style: none;
+}
+
+.wine-details__list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.wine-details__list i {
+  color: var(--bg-main);
+  margin-right: 1rem;
+  width: 20px;
+}
+
+/* Tasting Notes */
+.wine-tasting {
+  background-color: var(--bg-main);
+  color: var(--font-light);
+  padding: 4rem 0;
+}
+
+.wine-tasting__title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--font-light);
+}
+
+.wine-tasting__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tasting-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tasting-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tasting-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tasting-card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Data Section */
+.wine-data {
+  padding: 4rem 0;
+  background-color: var(--color-gray);
+}
+
+.wine-data__title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--bg-main);
+}
+
+.wine-data__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.data-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.data-card__value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--bg-main);
+  margin-bottom: 0.5rem;
+}
+
+/* Bottle Showcase Section */
+.wine-bottle-showcase {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.bottle-display {
+  position: relative;
+  perspective: 1000px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottle-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.bottle-3d {
+  max-height: 450px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+  transform: translateZ(50px);
+}
+
+.bottle-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  animation: shadowAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) rotateY(0);
+  }
+  25% {
+    transform: translateY(-20px) rotateY(5deg);
+  }
+  75% {
+    transform: translateY(-20px) rotateY(-5deg);
+  }
+}
+@keyframes shadowAnimation {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.1;
+  }
+}
+.showcase-content {
+  color: var(--font-light);
+  padding: 2rem;
+}
+
+.showcase-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--font-light);
+}
+
+.showcase-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.showcase-features {
+  list-style: none;
+}
+
+.showcase-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.showcase-features i {
+  color: var(--color-light);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Distribution Section */
+.wine-distribution {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+  color: var(--font-light);
+  text-align: center;
+}
+
+.distribution-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.distribution-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.distribution-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: var(--font-light);
+}
+
+.distribution-button {
+  display: inline-block;
+  background-color: var(--color-light);
+  color: var(--bg-main);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.distribution-button:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-3px);
+}
+
+/* Purchase Section */
+.wine-purchase {
+  padding: 4rem 0;
+  background-color: var(--color-gray);
+  text-align: center;
+}
+
+.purchase-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.purchase-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--bg-main);
+}
+
+.purchase-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--bg-main);
+}
+
+.purchase-button {
+  display: inline-block;
+  background-color: var(--bg-main);
+  color: var(--font-light);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.purchase-button:hover {
+  background-color: var(--bg-dark);
+  transform: translateY(-3px);
+}
+
+.laflota-error {
+  background: var(--bg-gradient);
+  color: var(--font-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.laflota-error__container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.laflota-error__title {
+  font-size: 8rem;
+  margin: 0;
+  color: var(--color-warning);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.laflota-error__text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.laflota-error__image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+}
+
+.laflota-error__logo {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.laflota-error__wine-bottle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  font-size: 5rem;
+  color: var(--color-light);
+  opacity: 0.8;
+}
+
+.laflota-error__wine-spill {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 20px;
+  height: 100px;
+  background: var(--color-warning);
+  transform-origin: top center;
+  animation: wine-spill 5s infinite;
+}
+
+@keyframes wine-spill {
+  0%, 100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(15deg);
+  }
+}
+.laflota-error__button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-warning);
+  color: var(--font-light);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.laflota-error__button:hover {
+  background-color: var(--bg-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .laflota-error__title {
+    font-size: 6rem;
+  }
+  .laflota-error__text {
+    font-size: 1.2rem;
+  }
+  .laflota-error__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Media Queries la flota*/
+@media (max-width: 968px) {
+  /*seccion-flota-history*/
+  .laflota-history__container,
+  .laflota-origins__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .laflota-history__content,
+  .laflota-history__image {
+    width: 100%;
+  }
+  .laflota-history__image {
+    margin-top: 2rem;
+  }
+  .laflota-process__grid {
+    grid-template-columns: 1fr;
+  }
+  .laflota-origins__container {
+    grid-template-columns: 1fr;
+  }
+  .laflota-origins__image {
+    order: -1;
+  }
+  /*seccion-flota-history*/
+  .wine-showcase__grid,
+  .showcase-grid,
+  .wine-tasting__grid,
+  .wine-data__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .wine-bottle,
+  .bottle-display {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+  .bottle-display {
+    height: 400px;
+  }
+  .bottle-3d {
+    max-height: 350px;
+  }
+  .showcase-content {
+    text-align: center;
+  }
+  .showcase-features li {
+    justify-content: center;
+  }
+  .wine-title {
+    font-size: 2rem;
+  }
+  .distribution-title,
+  .purchase-title {
+    font-size: 2rem;
+  }
+  .distribution-text,
+  .purchase-text {
+    font-size: 1rem;
+  }
+  /*btn-nosotros-readmore*/
+  .mas-info-nosotros {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .wine-container {
+    padding: 0 1rem;
+  }
+  .data-card {
+    padding: 1.5rem;
+  }
+  .bottle-display {
+    height: 300px;
+  }
+  .bottle-3d {
+    max-height: 250px;
+  }
+  .distribution-button,
+  .purchase-button {
+    width: 100%;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
+  /*la-flota-history*/
+  .laflota-history__title,
+  .laflota-process__title,
+  .laflota-origins__title {
+    font-size: 2rem;
+  }
+  /*la-flota-history*/
   /*nosotros*/
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
   .nosotros {
     padding: 0px 20px;
   }
@@ -718,7 +1762,7 @@ footer .group3-footer ul li a:hover {
     margin-bottom: 20px;
   }
   .nosotros-container .section-nosotros .about-content p {
-    padding: 0px;
+    padding: 1rem;
     font-size: 16px;
   }
   .nosotros-container .section-nosotros .about-content .btn {
@@ -761,6 +1805,9 @@ footer .group3-footer ul li a:hover {
   }
 }
 @media screen and (max-width: 576px) {
+  .logo-info {
+    width: 250px;
+  }
   .iconowines {
     width: 150px;
   }

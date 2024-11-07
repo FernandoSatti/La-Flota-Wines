@@ -96,6 +96,13 @@
     transition: var(--transition);
 }
 
+.logo-info{
+    position: absolute; /* Para poder posicionarlo en la esquina */
+    bottom: 10px; /* Ajusta según necesites */
+    left: 10px; /* Ajusta según necesites */
+    width: 500px; /* Ajusta el tamaño según necesites */
+    height: auto;
+}
 /*section info botella*/
 /*section gallery*/
 .image-grid {

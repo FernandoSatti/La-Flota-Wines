@@ -1,0 +1,98 @@
+
+.laflota-error {
+    background: var(--bg-gradient);
+    color: var(--font-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.laflota-error__container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.laflota-error__title {
+    font-size: 8rem;
+    margin: 0;
+    color: var(--color-warning);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.laflota-error__text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.laflota-error__image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+}
+
+.laflota-error__logo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.laflota-error__wine-bottle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    font-size: 5rem;
+    color: var(--color-light);
+    opacity: 0.8;
+}
+
+.laflota-error__wine-spill {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 20px;
+    height: 100px;
+    background: var(--color-warning);
+    transform-origin: top center;
+    animation: wine-spill 5s infinite;
+}
+
+@keyframes wine-spill {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(15deg); }
+}
+
+.laflota-error__button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-warning);
+    color: var(--font-light);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.laflota-error__button:hover {
+    background-color: var(--bg-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .laflota-error__title {
+        font-size: 6rem;
+    }
+
+    .laflota-error__text {
+        font-size: 1.2rem;
+    }
+
+    .laflota-error__image {
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -1,54 +1,184 @@
-@media screen and (max-width: 768px) {
-/*nosotros*/
-.nosotros{
-    padding: 0px 20px;
-    h1{
-        font-size: 36px;
-    }
-    p{
-        font-size: 17px;
-        margin-bottom: 0px;
-    }
-}
-.nosotros-container{
-    padding: 0px;
-    .section-nosotros{
-        padding: 0px;
-        flex-direction: column;
-        .about-image{
-            margin-right: 0px;
-            margin-bottom: 20px;
-        }
-        .about-content{
-            p{
-                padding: 0px;
-                font-size: 16px;
-            }
-            .btn{
-                font-size: 16px;
-            }
-        }
-    }
-    
-}
-/*nosotros*/
+/* Media Queries la flota*/
+@media (max-width: 968px) {
 
-.image-grid{
-    grid-template-columns: repeat(1, 1fr);
+    /*seccion-flota-history*/
+    .laflota-history__container,
+    .laflota-origins__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .laflota-history__content,
+    .laflota-history__image {
+        width: 100%;
+    }
+
+    .laflota-history__image {
+        margin-top: 2rem;
+    }
+
+    .laflota-process__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .laflota-origins__container {
+        grid-template-columns: 1fr;
+    }
+
+    .laflota-origins__image {
+        order: -1;
+    }
+
+    /*seccion-flota-history*/
+    .wine-showcase__grid,
+    .showcase-grid,
+    .wine-tasting__grid,
+    .wine-data__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .wine-bottle,
+    .bottle-display {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .bottle-display {
+        height: 400px;
+    }
+
+    .bottle-3d {
+        max-height: 350px;
+    }
+
+    .showcase-content {
+        text-align: center;
+    }
+
+    .showcase-features li {
+        justify-content: center;
+    }
+
+    .wine-title {
+        font-size: 2rem;
+    }
+
+    .distribution-title,
+    .purchase-title {
+        font-size: 2rem;
+    }
+
+    .distribution-text,
+    .purchase-text {
+        font-size: 1rem;
+    }
+    /*btn-nosotros-readmore*/
+    .mas-info-nosotros{
+        margin: 0.5rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .wine-container {
+        padding: 0 1rem;
+    }
+
+    .data-card {
+        padding: 1.5rem;
+    }
+
+    .bottle-display {
+        height: 300px;
+    }
+
+    .bottle-3d {
+        max-height: 250px;
+    }
+
+    .distribution-button,
+    .purchase-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*la-flota-history*/
+    .laflota-history__title,
+    .laflota-process__title,
+    .laflota-origins__title {
+        font-size: 2rem;
+    }
+
+    /*la-flota-history*/
+    /*nosotros*/
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros {
+        padding: 0px 20px;
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 17px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .nosotros-container {
+        padding: 0px;
+
+        .section-nosotros {
+            padding: 0px;
+            flex-direction: column;
+
+            .about-image {
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+
+            .about-content {
+                p {
+                    padding: 1rem;
+                    font-size: 16px;
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
+            }
+        }
+
+    }
+
+    /*nosotros*/
+
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
 
 
     footer {
         padding: 0 10px; // 0px 10px
+
         .group1-footer {
-            .box{
+            .box {
                 align-self: center
             }
+
             grid-template-columns: repeat(1, 1fr);
+
             .red-social {
                 text-align: center;
-                a { 
+
+                a {
                     display: inline-block;
                     text-decoration: none;
                     width: 55px; // 55px
@@ -59,12 +189,14 @@
                     transition: 300ms ease; // 300ms ease
                     justify-content: center; // justify-content: center;
                 }
-            }   
+            }
         }
+
         .group3-footer ul {
             padding: 0; // 0
             justify-content: center; // justify-content: center
             display: flex;
+
             li {
                 a {
                     color: #e9f5ec; // $textcolor
@@ -74,26 +206,34 @@
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
+    .logo-info {
+        width: 250px;
+    }
 
-    .iconowines{
+    .iconowines {
         width: 150px;
     }
-    .info-container{
+
+    .info-container {
         flex-direction: column;
+
         .info-container-text {
             width: 100%;
         }
-        .info-image{
+
+        .info-image {
             max-width: 150px;
         }
     }
-    .a-ficha{
+
+    .a-ficha {
         text-decoration: none;
     }
-    #btn-ficha{
+
+    #btn-ficha {
 
         display: block;
-        
+
     }
 }
