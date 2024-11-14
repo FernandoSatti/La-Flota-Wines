@@ -213,10 +213,16 @@ button:hover {
   flex: 1 1 300px;
 }
 
+.distribution-image{
+  display: flex;
+  justify-content: center;
+}
+
 .distribution-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  justify-content: center;
 }
 
 .floating {

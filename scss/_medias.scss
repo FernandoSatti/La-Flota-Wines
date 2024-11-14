@@ -145,8 +145,9 @@
 
             .about-content {
                 p {
-                    padding: 1rem;
-                    font-size: 16px;
+
+                    font-size: 0.9rem;
+                    line-height: 1.6;
                 }
 
                 .btn {
@@ -207,6 +208,7 @@
 }
 
 @media screen and (max-width: 576px) {
+
     .logo-info {
         width: 250px;
     }
@@ -220,6 +222,9 @@
 
         .info-container-text {
             width: 100%;
+            .h2-white{
+                font-size: 1.4rem;
+            }
         }
 
         .info-image {
@@ -232,8 +237,9 @@
     }
 
     #btn-ficha {
-
+        margin-top: 1rem;
         display: block;
+        
 
     }
 }
