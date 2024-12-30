@@ -50,3 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /*desplazamiendo del header*/
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { // Cuando el elemento es visible
+                const element = entry.target;
+                element.classList.remove('hidden'); // Quitar la clase 'hidden'
+                element.classList.add('animate__fadeInUp'); // Agregar la animación
+                observer.unobserve(element); // Dejar de observar
+            }
+        });
+    });
+
+    // Selecciona todos los elementos con la clase animated-element
+    const elementsToAnimate = document.querySelectorAll('.animated-element');
+    elementsToAnimate.forEach(el => observer.observe(el));
+});
+
+

@@ -17,7 +17,7 @@
 
 /*header nuevo*/
 .hero {
-  background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+  background-image: url(../img/background-flota.webp);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -26,6 +26,7 @@
   justify-content: center;
   text-align: center;
   color: white;
+  will-change: transform, opacity;
 }
 
 .hero-content h1 {
@@ -238,6 +239,10 @@
 
 /*boton hamburgesa de la nav*/
 /*nav*/
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -390,6 +395,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .pulse {
   animation: pulse-animation 2s infinite;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 @keyframes pulse-animation {
@@ -1310,9 +1319,8 @@ footer .group3-footer ul li a:hover {
 }
 
 .wine-bottle__image {
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
-  transform: translateZ(50px);
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
   transition: var(--transition);
 }

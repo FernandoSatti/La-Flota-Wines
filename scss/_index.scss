@@ -1,6 +1,6 @@
 /*header nuevo*/
 .hero {
-    background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-image: url(../img/background-flota.webp);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -9,12 +9,14 @@
     justify-content: center;
     text-align: center;
     color: white;
+    will-change: transform, opacity;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .hero-content p {

@@ -22,15 +22,13 @@
     transition: transform 0.8s ease-in-out;
     animation: floatBottle 6s ease-in-out infinite;
     margin: 80px;
-
 }
 
 
 
 .wine-bottle__image {
-    max-width: 100%;
+    max-width: 85%;
     height: auto;
-    transform: translateZ(50px);
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
     transition: var(--transition);
     &:hover{
