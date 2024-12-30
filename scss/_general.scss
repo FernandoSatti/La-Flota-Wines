@@ -161,7 +161,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hidden {
-  opacity: 0; 
+  opacity: 0;
+    transform: translate3d(0, 50px, 0); /* Posición inicial */
+    visibility: hidden; /* Ocultar el elemento inicialmente */
+    transition: all 0.3s ease-out; /* Suavizar la transición */
 }
 
 @keyframes pulse-animation {
@@ -172,6 +175,25 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
 }
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s; /* Ajusta el tiempo de la animación */
+  animation-fill-mode: both;
+  visibility: visible
+}
+
 
 @keyframes shake {
   0% { transform: translateX(0); }

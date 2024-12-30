@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Selecciona todos los elementos con la clase animated-element
-    const elementsToAnimate = document.querySelectorAll('.animated-element');
+    // Selecciona todos los elementos con la clase "hidden"
+    const elementsToAnimate = document.querySelectorAll('.hidden');
     elementsToAnimate.forEach(el => observer.observe(el));
 });
+
 
 
