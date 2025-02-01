@@ -120,10 +120,14 @@
 }
 
 .logo-info {
-  position: absolute; /* Para poder posicionarlo en la esquina */
-  bottom: 10px; /* Ajusta según necesites */
-  left: 10px; /* Ajusta según necesites */
-  width: 500px; /* Ajusta el tamaño según necesites */
+  position: absolute;
+  /* Para poder posicionarlo en la esquina */
+  bottom: 10px;
+  /* Ajusta según necesites */
+  left: 10px;
+  /* Ajusta según necesites */
+  width: 500px;
+  /* Ajusta el tamaño según necesites */
   height: auto;
 }
 
@@ -153,6 +157,178 @@
   transform: scale(1.05);
 }
 
+/*section video index*/
+.main-flotawines {
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
+}
+
+.seccion-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Título de la galería */
+.titulo-galeria {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor Superior */
+.contenedor-superior {
+  margin-bottom: 4rem;
+}
+
+/* Galería de vinos */
+.galeria-vinos {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta-vino {
+  position: relative;
+  width: calc(33.333% - 1rem);
+  min-width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-vino:hover,
+.tarjeta-vino.activo {
+  transform: translateY(-5px);
+}
+
+.imagen-vino {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  transition: transform 0.3s ease;
+  color: var(--color-light);
+}
+
+.overlay-texto h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-texto .descripcion {
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tarjeta-vino:hover .overlay-texto .descripcion,
+.tarjeta-vino.activo .overlay-texto .descripcion {
+  opacity: 1;
+}
+
+/* Contenedor Inferior */
+.contenedor-inferior {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contenedor-descripcion {
+  flex: 1;
+}
+
+.contenedor-descripcion h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contenedor-descripcion p {
+  margin-bottom: 1rem;
+}
+
+/* Video */
+.contenedor-video {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.boton-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-play:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.icono-play {
+  font-size: 1.5rem;
+}
+
+.texto-play {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.boton-play.reproduciendo {
+  opacity: 0.1;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.progreso {
+  height: 100%;
+  background-color: #ff4d4d;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+/*section video index*/
 /*nav*/
 .navbar {
   transition: top 0.3s;
@@ -1758,6 +1934,11 @@ footer .group3-footer ul li a:hover {
   }
 }
 /* Media Queries la flota*/
+@media (max-width: 1024px) {
+  .tarjeta-vino {
+    width: calc(50% - 1rem);
+  }
+}
 @media (max-width: 968px) {
   /*seccion-flota-history*/
   .laflota-history__container,
@@ -1840,8 +2021,38 @@ footer .group3-footer ul li a:hover {
     width: 100%;
     text-align: center;
   }
+  /*video-responsive*/
+  .seccion-principal {
+    padding: 1rem;
+  }
+  .contenedor-descripcion h2 {
+    font-size: 1.5rem;
+  }
+  .titulo-galeria {
+    font-size: 2rem;
+  }
+  /*video-responsive*/
 }
 @media screen and (max-width: 768px) {
+  /*video-responsive*/
+  .contenedor-inferior {
+    flex-direction: column;
+  }
+  .tarjeta-vino {
+    width: 100%;
+  }
+  .contenedor-descripcion {
+    text-align: center;
+  }
+  .boton-play {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .texto-play {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  /*video-responsive*/
   /*la-flota-history*/
   .laflota-history__title,
   .laflota-process__title,
@@ -1943,19 +2154,6 @@ footer .group3-footer ul li a:hover {
     margin-top: 1rem;
     display: block;
   }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.fadeInUp {
-  animation-name: fadeInUp;
 }
 
 /*# sourceMappingURL=styles.css.map */

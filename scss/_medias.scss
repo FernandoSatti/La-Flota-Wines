@@ -1,4 +1,11 @@
 /* Media Queries la flota*/
+
+@media (max-width: 1024px) {
+    .tarjeta-vino {
+        width: calc(50% - 1rem);
+    }
+}
+
 @media (max-width: 968px) {
 
     /*seccion-flota-history*/
@@ -101,10 +108,47 @@
         width: 100%;
         text-align: center;
     }
+/*video-responsive*/
+.seccion-principal {
+    padding: 1rem;
+  }
+
+  .contenedor-descripcion h2 {
+    font-size: 1.5rem;
+  }
+
+  .titulo-galeria {
+    font-size: 2rem;
+  }
+/*video-responsive*/
 }
 
 @media screen and (max-width: 768px) {
 
+
+/*video-responsive*/
+.contenedor-inferior {
+    flex-direction: column;
+  }
+
+  .tarjeta-vino {
+    width: 100%;
+  }
+
+  .contenedor-descripcion {
+    text-align: center;
+  }
+
+  .boton-play {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .texto-play {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+/*video-responsive*/
     /*la-flota-history*/
     .laflota-history__title,
     .laflota-process__title,
