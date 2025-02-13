@@ -13,7 +13,7 @@ h2 {
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: var(--bg-light);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb:hover {
 	bottom:40px;
 	right:40px;
 	background-color:#25d366;
-	color:#FFF;
+	color:var(--color-light);
 	border-radius:50px;
 	text-align:center;
   font-size:30px;
@@ -144,7 +144,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .float:hover {
 	text-decoration: none;
-	color: #FFF;
+	color: var(--color-light);
   background-color:#1ab152;
     
     animation: shake 1s;
