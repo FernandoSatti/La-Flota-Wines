@@ -1,31 +1,46 @@
+/* Base styles */
+:root {
+  --color-light: #ffffff;
+  --color-gray: #f0f0f0;
+  --font-light: #ffffff;
+  --font-dark: #333333;
+  --bg-light: #ffffff;
+  --bg-main: #19233e;
+  --bg-gradient: linear-gradient(90deg, rgba(25, 35, 62, 1) 0%, rgba(25, 35, 62, 1) 32%, rgba(6, 41, 80, 1) 100%);
+  --transition: 0.5s ease-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+}
+
+body {
+  background-color: var(--bg-light);
+  font-family: Arial, sans-serif;
+  color: var(--font-dark);
 }
 
 h2 {
   color: var(--font-light);
 }
 
-body {
-  background-color: var(--bg-light);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+p {
+  color: var(--font-light);
 }
 
-
+/* Custom button styles */
+.btn,
 #btn-submit {
   padding: 0.8em 1.75em;
   background-color: transparent;
   border-radius: 6px;
   border: 0.3px solid var(--font-dark);
-  transition: 0.5s;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -35,52 +50,24 @@ body {
   font-family: "Roboto", "Segoe UI", sans-serif;
   text-transform: uppercase;
   color: var(--font-light);
-
-  &:hover {
-    background: var(--bg-gradient);
-    color: var(--font-light);
-    transition: 0.5s ease-out;
-    transform: scale(1.1);
-  }
-}
-
-p {
-  color: var(--font-light);
-}
-
-/*personalizacion de botones*/
-.btn {
-  --color: var(--color-light);
-  --color2: var(--color-light);
-  padding: 0.8em 1.75em;
-  background-color: transparent;
-  border-radius: 6px;
-  border: 0.3px solid var(--color);
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 600;
-  font-size: 17px;
-  font-family: "Roboto", "Segoe UI", sans-serif;
-  text-transform: uppercase;
-  color: var(--color);
+  transition: var(--transition);
 }
 
 .btn::after,
 .btn::before {
   content: "";
-  display: block;
+  position: absolute;
   height: 100%;
   width: 100%;
   transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
+  background-color: var(--bg-light);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.btn::after {
   inset: 50%;
   left: 25%;
-  z-index: -1;
-  transition: 0.5s ease-out;
-  background-color: var(--bg-light);
 }
 
 .btn::before {
@@ -91,25 +78,26 @@ p {
 
 .btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-  color: var(--color-gray);
 }
 
 .btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
-  color: var(--color-gray);
 }
 
-.btn:hover {
+.btn:hover,
+#btn-submit:hover {
   color: var(--font-dark);
+  background: var(--bg-gradient);
+  transform: scale(1.1);
 }
 
-.btn:active {
+.btn:active,
+#btn-submit:active {
   filter: brightness(0.7);
   transform: scale(0.98);
 }
 
-/*personalizacion de botones*/
-/*scrollbar*/
+/* Scrollbar */
 body::-webkit-scrollbar {
   width: 13px;
   background: var(--bg-main);
@@ -122,51 +110,52 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: rgb(102, 102, 102);
+  background: #666;
 }
 
-/*scrollbar*/
-
-/*boton whatsapp*/
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:var(--color-light);
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+/* WhatsApp button */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: var(--color-light);
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  transition: var(--transition);
 }
+
 .float:hover {
-	text-decoration: none;
-	color: var(--color-light);
-  background-color:#1ab152;
-    
-    animation: shake 1s;
-
- 
-  animation-iteration-count: infinite;
+  background-color: #1ab152;
+  animation: shake 1s infinite;
 }
 
-.my-float{
-	margin-top:16px;
+.my-float {
+  margin-top: 16px;
 }
+
 .pulse {
   animation: pulse-animation 2s infinite;
 }
 
 .hidden {
   opacity: 0;
-    transform: translate3d(0, 50px, 0); /* Posición inicial */
-    visibility: hidden; /* Ocultar el elemento inicialmente */
-    transition: all 0.3s ease-out; /* Suavizar la transición */
+  transform: translate3d(0, 50px, 0);
+  visibility: hidden;
+  transition: var(--transition);
 }
 
+.animate__fadeInUp {
+  animation: fadeInUp 1s both;
+  visibility: visible;
+}
+
+/* Animations */
 @keyframes pulse-animation {
   0% {
     box-shadow: 0 0 0 0px #25d36657;
@@ -178,28 +167,23 @@ body::-webkit-scrollbar-thumb:hover {
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
   to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.animate__fadeInUp {
-  animation-name: fadeInUp;
-  animation-duration: 1s; /* Ajusta el tiempo de la animación */
-  animation-fill-mode: both;
-  visibility: visible
-}
-
-
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: scale(1.1); }
-  50% { transform: scale(1.1); }
-  
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: scale(1.1);
+  }
 }
 
-/*boton whatsapp*/

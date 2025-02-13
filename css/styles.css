@@ -16,10 +16,16 @@
 }
 
 /*header nuevo*/
+/* Common styles */
+:root {
+  --border-radius: 10px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+/* Hero section */
 .hero {
-  background-image: url(../img/background-flota.webp);
-  background-size: cover;
-  background-position: center;
+  background: url(../img/background-flota.webp) center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -41,7 +47,7 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/*header nuevo*/
+/* Grid and flex layouts */
 .grid {
   max-width: 800px;
   margin: auto;
@@ -55,7 +61,6 @@
 .text,
 .image {
   flex: 1;
-  /* Para que ocupen el mismo espacio */
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -66,7 +71,7 @@
   height: auto;
 }
 
-/*section info botella*/
+/* Info bottle section */
 .h2-white {
   color: var(--font-light);
   font-weight: 800;
@@ -75,43 +80,34 @@
 
 .info-container {
   display: flex;
-  /* Usar flexbox */
   justify-content: center;
   align-items: center;
-  /* Alinear verticalmente */
   border: 1px solid black;
-  background: rgb(25, 35, 62);
-  background: -moz-linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
-  background: -webkit-linear-gradient(90deg, rgb(25, 35, 62) 0%, rgb(25, 35, 62) 32%, rgb(6, 41, 80) 100%);
   background: var(--bg-gradient);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   margin: 20px;
   width: auto;
 }
 
 .info-container-text {
   width: 50%;
-  /* 50% de ancho */
   padding: 20px;
-  /* Espaciado interno */
   color: var(--font-light);
 }
+
 .info-container-text #btn-ficha {
   margin-top: 1rem;
 }
+
 .info-container-text .span-vino {
   display: block;
 }
 
 .info-image {
   width: 100%;
-  /* Ancho completo del contenedor */
   max-width: 200px;
-  /* Ajusta este valor según lo necesites */
   height: auto;
-  /* Mantener la proporción de la imagen */
   object-fit: cover;
-  /* Ajustar la imagen a su contenedor */
   transition: var(--transition);
 }
 
@@ -121,18 +117,11 @@
 
 .logo-info {
   position: absolute;
-  /* Para poder posicionarlo en la esquina */
   bottom: 10px;
-  /* Ajusta según necesites */
   left: 10px;
-  /* Ajusta según necesites */
-  width: 500px;
-  /* Ajusta el tamaño según necesites */
-  height: auto;
 }
 
-/*section info botella*/
-/*section gallery*/
+/* Gallery section */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -140,7 +129,7 @@
   padding: 1rem;
   background: var(--bg-gradient);
   margin: 20px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 .grid-item img,
@@ -148,7 +137,7 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   transition: var(--transition);
 }
 
@@ -157,7 +146,7 @@
   transform: scale(1.05);
 }
 
-/*section video index*/
+/* Video index section */
 .main-flotawines {
   min-height: 100vh;
   background: var(--bg-gradient);
@@ -169,7 +158,6 @@
   padding: 2rem;
 }
 
-/* Título de la galería */
 .titulo-galeria {
   text-align: center;
   font-size: 2.5rem;
@@ -178,12 +166,10 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Contenedor Superior */
 .contenedor-superior {
   margin-bottom: 4rem;
 }
 
-/* Galería de vinos */
 .galeria-vinos {
   display: flex;
   gap: 1.5rem;
@@ -197,8 +183,8 @@
   min-width: 280px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
 }
 
 .tarjeta-vino:hover,
@@ -220,7 +206,7 @@
   right: 0;
   padding: 1.5rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  transition: transform 0.3s ease;
+  transition: var(--transition);
   color: var(--color-light);
 }
 
@@ -240,7 +226,6 @@
   opacity: 1;
 }
 
-/* Contenedor Inferior */
 .contenedor-inferior {
   display: flex;
   gap: 3rem;
@@ -260,7 +245,6 @@
   margin-bottom: 1rem;
 }
 
-/* Video */
 .contenedor-video {
   flex: 1;
   position: relative;
@@ -289,7 +273,7 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .boton-play:hover {
@@ -311,7 +295,6 @@
   opacity: 0.1;
 }
 
-/* Barra de progreso */
 .barra-progreso {
   position: absolute;
   bottom: 0;
@@ -328,7 +311,6 @@
   transition: width 0.1s linear;
 }
 
-/*section video index*/
 /*nav*/
 .navbar {
   transition: top 0.3s;
@@ -415,6 +397,18 @@
 
 /*boton hamburgesa de la nav*/
 /*nav*/
+/* Base styles */
+:root {
+  --color-light: #ffffff;
+  --color-gray: #f0f0f0;
+  --font-light: #ffffff;
+  --font-dark: #333333;
+  --bg-light: #ffffff;
+  --bg-main: #19233e;
+  --bg-gradient: linear-gradient(90deg, rgba(25, 35, 62, 1) 0%, rgba(25, 35, 62, 1) 32%, rgba(6, 41, 80, 1) 100%);
+  --transition: 0.5s ease-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -425,53 +419,27 @@ html {
   box-sizing: border-box;
 }
 
-h2 {
-  color: var(--font-light);
-}
-
 body {
   background-color: var(--bg-light);
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  color: var(--font-dark);
 }
 
-#btn-submit {
-  padding: 0.8em 1.75em;
-  background-color: transparent;
-  border-radius: 6px;
-  border: 0.3px solid var(--font-dark);
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 600;
-  font-size: 17px;
-  font-family: "Roboto", "Segoe UI", sans-serif;
-  text-transform: uppercase;
+h2 {
   color: var(--font-light);
-}
-#btn-submit:hover {
-  background: var(--bg-gradient);
-  color: var(--font-light);
-  transition: 0.5s ease-out;
-  transform: scale(1.1);
 }
 
 p {
   color: var(--font-light);
 }
 
-/*personalizacion de botones*/
-.btn {
-  --color: var(--color-light);
-  --color2: var(--color-light);
+/* Custom button styles */
+.btn,
+#btn-submit {
   padding: 0.8em 1.75em;
   background-color: transparent;
   border-radius: 6px;
-  border: 0.3px solid var(--color);
-  transition: 0.5s;
+  border: 0.3px solid var(--font-dark);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -480,22 +448,25 @@ p {
   font-size: 17px;
   font-family: "Roboto", "Segoe UI", sans-serif;
   text-transform: uppercase;
-  color: var(--color);
+  color: var(--font-light);
+  transition: var(--transition);
 }
 
 .btn::after,
 .btn::before {
   content: "";
-  display: block;
+  position: absolute;
   height: 100%;
   width: 100%;
   transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
+  background-color: var(--bg-light);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.btn::after {
   inset: 50%;
   left: 25%;
-  z-index: -1;
-  transition: 0.5s ease-out;
-  background-color: var(--bg-light);
 }
 
 .btn::before {
@@ -506,25 +477,26 @@ p {
 
 .btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-  color: var(--color-gray);
 }
 
 .btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
-  color: var(--color-gray);
 }
 
-.btn:hover {
+.btn:hover,
+#btn-submit:hover {
   color: var(--font-dark);
+  background: var(--bg-gradient);
+  transform: scale(1.1);
 }
 
-.btn:active {
+.btn:active,
+#btn-submit:active {
   filter: brightness(0.7);
   transform: scale(0.98);
 }
 
-/*personalizacion de botones*/
-/*scrollbar*/
+/* Scrollbar */
 body::-webkit-scrollbar {
   width: 13px;
   background: var(--bg-main);
@@ -537,11 +509,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: rgb(102, 102, 102);
+  background: #666;
 }
 
-/*scrollbar*/
-/*boton whatsapp*/
+/* WhatsApp button */
 .float {
   position: fixed;
   width: 60px;
@@ -555,14 +526,12 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
+  transition: var(--transition);
 }
 
 .float:hover {
-  text-decoration: none;
-  color: var(--color-light);
   background-color: #1ab152;
-  animation: shake 1s;
-  animation-iteration-count: infinite;
+  animation: shake 1s infinite;
 }
 
 .my-float {
@@ -575,11 +544,17 @@ body::-webkit-scrollbar-thumb:hover {
 
 .hidden {
   opacity: 0;
-  transform: translate3d(0, 50px, 0); /* Posición inicial */
-  visibility: hidden; /* Ocultar el elemento inicialmente */
-  transition: all 0.3s ease-out; /* Suavizar la transición */
+  transform: translate3d(0, 50px, 0);
+  visibility: hidden;
+  transition: var(--transition);
 }
 
+.animate__fadeInUp {
+  animation: fadeInUp 1s both;
+  visibility: visible;
+}
+
+/* Animations */
 @keyframes pulse-animation {
   0% {
     box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.3411764706);
@@ -598,25 +573,14 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translate3d(0, 0, 0);
   }
 }
-.animate__fadeInUp {
-  animation-name: fadeInUp;
-  animation-duration: 1s; /* Ajusta el tiempo de la animación */
-  animation-fill-mode: both;
-  visibility: visible;
-}
-
 @keyframes shake {
-  0% {
+  0%, 100% {
     transform: translateX(0);
   }
-  25% {
-    transform: scale(1.1);
-  }
-  50% {
+  25%, 75% {
     transform: scale(1.1);
   }
 }
-/*boton whatsapp*/
 .swal2-confirm {
   background-color: var(--bg-main);
   /* Cambia el color de fondo */
@@ -866,15 +830,11 @@ body::-webkit-scrollbar-thumb:hover {
   transform: scale(1.05);
 }
 
-/*section form*/
-.h1-contact {
-  background: var(--bg-gradient);
-  color: var(--font-light);
-  border-radius: 10px;
-}
-
-.form-info {
-  background: var(--bg-gradient);
+/* Common styles */
+:root {
+  --border-radius: 8px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -884,15 +844,21 @@ body {
   background-color: var(--bg-light);
 }
 
+/* Form section */
 .section-form {
+  max-width: 800px;
+  margin: 160px auto 30px;
   padding: 5px;
   background-color: var(--bg-light);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: auto;
-  border-radius: 8px;
-  margin-top: 160px;
-  margin-bottom: 30px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.h1-contact,
+.form-info {
+  background: var(--bg-gradient);
+  color: var(--font-light);
+  border-radius: var(--border-radius);
 }
 
 .section-form-container h1 {
@@ -906,10 +872,6 @@ body {
   gap: 20px;
 }
 
-.div-form {
-  flex: 1;
-}
-
 .form-group {
   margin-bottom: 15px;
 }
@@ -921,11 +883,12 @@ label {
 }
 
 input,
-textarea {
+textarea,
+#subject {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--bg-main);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   transition: border-color 0.3s;
 }
 
@@ -934,19 +897,14 @@ textarea:focus {
   border-color: var(--bg-main);
 }
 
-#subject {
-  border-radius: 10px;
-  padding: 10px;
-}
-
 button {
   background: var(--bg-gradient);
   color: white;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: var(--transition);
 }
 
 button:hover {
@@ -954,26 +912,12 @@ button:hover {
 }
 
 .form-info {
-  background-color: var(--bg-light);
   padding: 15px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 600px) {
-  .contact-container {
-    flex-direction: row;
-  }
-  .div-form,
-  .form-info {
-    flex: 1;
-  }
-}
-/*section form*/
-/*button-wp*/
+/* WhatsApp button */
 .button2 {
   display: inline-block;
-  transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -984,12 +928,13 @@ button:hover {
   background: var(--bg-light);
   border: 1px solid var(--bg-light);
   text-decoration: none;
+  transition: var(--transition);
 }
 
 .button2 > svg {
   height: 30px;
   position: absolute;
-  padding: 0px 5px;
+  padding: 0 5px;
   margin-top: -4px;
 }
 
@@ -998,55 +943,43 @@ button:hover {
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px var(--bg-light);
 }
 
-.button2:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.25);
-  top: 100%;
-  width: 140%;
-  height: 180%;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-  z-index: -1;
-}
-
+.button2:before,
 .button2:after {
   content: "";
   position: absolute;
-  left: 55%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.45);
-  top: 180%;
-  width: 160%;
-  height: 190%;
-  background-color: #009087;
+  left: 50%;
+  top: 100%;
+  width: 140%;
+  height: 180%;
   border-radius: 50%;
-  display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: -1;
+  transition: var(--transition);
+}
+
+.button2:before {
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button2:after {
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  background-color: #009087;
+  top: 180%;
 }
 
 .button2:hover {
   color: #ffffff;
-  border: 1px solid #009087;
+  border-color: #009087;
 }
 
-.button2:hover:before {
+.button2:hover:before,
+.button2:hover:after {
   top: -35%;
   background-color: #009087;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
-.button2:hover:after {
-  top: -45%;
-  background-color: #009087;
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-/*button-wp*/
-/*section-distribuidores*/
+/* Distributor section */
 .distribution {
   display: flex;
   flex-wrap: wrap;
@@ -1063,7 +996,7 @@ button:hover {
   gap: 2rem;
   justify-content: center;
   background-color: var(--bg-light);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   max-width: 800px;
   padding: 10px;
 }
@@ -1081,8 +1014,7 @@ button:hover {
 .distribution-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  justify-content: center;
+  border-radius: var(--border-radius);
 }
 
 .floating {
@@ -1092,26 +1024,19 @@ button:hover {
 }
 
 @keyframes float {
-  0% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
     transform: translateY(-20px);
   }
-  100% {
-    transform: translateY(0px);
-  }
 }
-.h2-dark {
-  color: var(--bg-main);
-}
-
+.h2-dark,
 .p-dark {
   color: var(--bg-main);
 }
 
-/*section-distribuidores*/
-/*section-team*/
+/* Team section */
 .team {
   padding: 4rem 0;
 }
@@ -1139,9 +1064,9 @@ button:hover {
   text-align: center;
   background-color: var(--color-light);
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
 }
 
 .team-member:hover {
@@ -1157,15 +1082,14 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-.team-member h3 {
+.team-member h3,
+.team-member .role {
   color: var(--bg-main);
   margin-bottom: 0.5rem;
 }
 
 .team-member .role {
-  color: var(--bg-main);
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 .team-member .bio {
@@ -1174,6 +1098,15 @@ button:hover {
   color: var(--bg-main);
 }
 
+@media (min-width: 600px) {
+  .contact-container {
+    flex-direction: row;
+  }
+  .div-form,
+  .form-info {
+    flex: 1;
+  }
+}
 /*section-team*/
 /*footer*/
 footer {
