@@ -1965,6 +1965,13 @@ footer .group3-footer ul li a:hover {
   /*video-responsive*/
 }
 @media screen and (max-width: 768px) {
+  .nosotros-container {
+    margin-top: 80px;
+    border-radius: 10px;
+  }
+  #carouselExample {
+    display: none;
+  }
   /*video-responsive*/
   .contenedor-inferior {
     flex-direction: column;
@@ -2009,6 +2016,7 @@ footer .group3-footer ul li a:hover {
     padding: 0px;
   }
   .nosotros-container .section-nosotros {
+    margin-top: 30px;
     padding: 0px;
     flex-direction: column;
   }

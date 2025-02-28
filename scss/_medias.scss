@@ -124,8 +124,13 @@
 }
 
 @media screen and (max-width: 768px) {
-
-
+.nosotros-container{
+    margin-top: 80px;
+    border-radius: 10px;
+}
+    #carouselExample{
+        display:none;
+    }
 /*video-responsive*/
 .contenedor-inferior {
     flex-direction: column;
@@ -179,6 +184,7 @@
         padding: 0px;
 
         .section-nosotros {
+            margin-top: 30px;
             padding: 0px;
             flex-direction: column;
 
@@ -252,6 +258,7 @@
 }
 
 @media screen and (max-width: 576px) {
+    
 
     .logo-info {
         width: 250px;
