@@ -433,6 +433,12 @@ p {
   color: var(--font-light);
 }
 
+#text-light {
+  color: var(--font-light);
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+
 /* Custom button styles */
 .btn,
 #btn-submit {
@@ -1067,6 +1073,9 @@ button:hover {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-member:hover {
