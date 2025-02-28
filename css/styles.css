@@ -116,12 +116,6 @@
   transform: scale(1.1);
 }
 
-.logo-info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
 /* Gallery section */
 .image-grid {
   display: grid;
